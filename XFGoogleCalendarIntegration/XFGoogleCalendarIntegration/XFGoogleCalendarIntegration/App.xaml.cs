@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using XFGoogleCalendarIntegration.Pages;
 
 namespace XFGoogleCalendarIntegration
 {
@@ -13,7 +14,7 @@ namespace XFGoogleCalendarIntegration
         {
             InitializeComponent();
 
-            MainPage = new XFGoogleCalendarIntegration.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
