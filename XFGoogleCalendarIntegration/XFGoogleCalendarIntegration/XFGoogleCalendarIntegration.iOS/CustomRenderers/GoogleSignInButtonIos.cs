@@ -8,8 +8,10 @@ using Google.SignIn;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using XFGoogleCalendarIntegration.Constants;
 using XFGoogleCalendarIntegration.CustomViews;
 using XFGoogleCalendarIntegration.iOS.CustomRenderers;
+using XFGoogleCalendarIntegration.Models;
 
 [assembly: ExportRenderer(typeof(GoogleSignInButton), typeof(GoogleSignInButtonIos))]
 namespace XFGoogleCalendarIntegration.iOS.CustomRenderers
@@ -34,7 +36,12 @@ namespace XFGoogleCalendarIntegration.iOS.CustomRenderers
         {
             if (error == null)
             {
-                
+                var token = new AccessTokenModel()
+                {
+                    Token = user.Authentication.AccessToken
+                };
+
+                MessagingCenter.Send<object, AccessTokenModel>(this, MessageNames.LoggedIn, token);
             }
         }
 

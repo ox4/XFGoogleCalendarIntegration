@@ -8,6 +8,6 @@ namespace XFGoogleCalendarIntegration.Constants
 {
     public static class MessageNames
     {
-        public static string AuthStateChanged = "authStateChanged";
+        public static string LoggedIn = "loggedIn";
     }
 }

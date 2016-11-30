@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using XFGoogleCalendarIntegration.Constants;
+using XFGoogleCalendarIntegration.Models;
 
 namespace XFGoogleCalendarIntegration.Pages
 {
@@ -14,10 +15,10 @@ namespace XFGoogleCalendarIntegration.Pages
         public MainPage()
         {
             InitializeComponent();
-            MessagingCenter.Subscribe<GoogleSignInPage, bool>(this, MessageNames.AuthStateChanged, OnAuthStateChange);
+            MessagingCenter.Subscribe<object, AccessTokenModel>(this, MessageNames.LoggedIn, OnLogIn);
         }
 
-        private void OnAuthStateChange(GoogleSignInPage sender, bool isAuthorized)
+        private void OnLogIn(object sender, AccessTokenModel token)
         {
         }
     }
