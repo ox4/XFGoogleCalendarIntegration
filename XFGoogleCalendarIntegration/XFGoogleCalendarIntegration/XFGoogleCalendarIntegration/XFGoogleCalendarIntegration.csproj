@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Constants\GoogleApiConstants.cs" />
+    <Compile Include="Constants\MessageNames.cs" />
     <Compile Include="CustomViews\GoogleSignInButton.cs" />
     <Compile Include="Models\AccessTokenModel.cs" />
     <Compile Include="Pages\GoogleSignInPage.xaml.cs">

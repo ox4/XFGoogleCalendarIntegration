@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using XFGoogleCalendarIntegration.Constants;
 using XFGoogleCalendarIntegration.Services;
 
 namespace XFGoogleCalendarIntegration.Pages
@@ -38,6 +39,7 @@ namespace XFGoogleCalendarIntegration.Pages
             {
                 var token = await this.googleOAuthService.GetAccessTokenAsync(code);
                 var a = token;
+                MessagingCenter.Send(this, MessageNames.AuthStateChanged, true);
             }
         }
     }
