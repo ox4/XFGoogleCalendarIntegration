@@ -15,7 +15,8 @@ namespace XFGoogleCalendarIntegration.Pages
         public GoogleSignInPage()
         {
             this.googleOAuthService = new GoogleOAuthService();
-            InitializeComponent();
+            this.InitializeComponent();
+            this.InitializeWebView();
         }
 
         private void InitializeWebView()
