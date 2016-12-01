@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>XFGoogleCalendarIntegration</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.nixsolutions.ipapa</string>
+	<string>com.compenyname.xfintegration</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>
