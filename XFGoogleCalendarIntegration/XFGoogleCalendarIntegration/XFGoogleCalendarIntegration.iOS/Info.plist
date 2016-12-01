@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>XFGoogleCalendarIntegration</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.compenyname.xfintegration</string>
+	<string>com.nixsolutions.ipapa</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>
@@ -55,8 +55,8 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.nixsolutions.ipapa</string>
-				<string>com.googleusercontent.apps.192079722147-foetvqvjduvk6hh56uii4ep7lm5iiqu3</string>
+				<string></string>
+				<string></string>
 			</array>
 		</dict>
 	</array>
