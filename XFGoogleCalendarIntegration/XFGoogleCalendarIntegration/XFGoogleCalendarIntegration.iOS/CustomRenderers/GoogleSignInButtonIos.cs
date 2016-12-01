@@ -26,7 +26,7 @@ namespace XFGoogleCalendarIntegration.iOS.CustomRenderers
             SignIn.SharedInstance.Delegate = this;
             SignIn.SharedInstance.Scopes = new[]
             {
-                "https://www.googleapis.com/auth/calendar"
+                GoogleApiConstants.Scope
             };
             this.SetNativeControl(signInButton);
             base.OnElementChanged(e);

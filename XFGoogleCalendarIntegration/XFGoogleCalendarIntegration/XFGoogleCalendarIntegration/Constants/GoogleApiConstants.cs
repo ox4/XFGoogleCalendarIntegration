@@ -16,5 +16,8 @@ namespace XFGoogleCalendarIntegration.Constants
 
         // Redirect URL Web Application проекта 
         public static string RedirectUrl = "";
+
+        // Scope запрашиваемой части API
+        public static string Scope = "https://www.googleapis.com/auth/calendar";
     }
 }

@@ -22,7 +22,7 @@ namespace XFGoogleCalendarIntegration.Services
 
         public string RequestUrl => "https://accounts.google.com/o/oauth2/v2/auth"
                                     + "?response_type=code"
-                                    + "&scope=https://www.googleapis.com/auth/calendar"
+                                    + "&scope=" + GoogleApiConstants.Scope
                                     + "&redirect_uri=" + GoogleApiConstants.RedirectUrl
                                     + "&client_id=" + GoogleApiConstants.ClientId;
 
