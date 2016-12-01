@@ -24,15 +24,9 @@ namespace XFGoogleCalendarIntegration.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            // Client Id iOS приложения, созданного в Google API Console
             string clientId = "192079722147-foetvqvjduvk6hh56uii4ep7lm5iiqu3.apps.googleusercontent.com";
-
-            //NSError configureError;
-            //Context.SharedInstance.Configure(out configureError);
-            //if (configureError != null)
-            //{
-                SignIn.SharedInstance.ClientID = clientId;
-                //SignIn.SharedInstance.ServerClientID = "192079722147-k89ga85nbbtj58p36msshrmh9i66phk9.apps.googleusercontent.com";
-            //}
+            SignIn.SharedInstance.ClientID = clientId;
 
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());

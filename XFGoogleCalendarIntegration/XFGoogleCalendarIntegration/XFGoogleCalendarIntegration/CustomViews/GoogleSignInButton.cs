@@ -18,6 +18,7 @@ namespace XFGoogleCalendarIntegration.CustomViews
 
         private async void OnClicked(object sender, EventArgs eventArgs)
         {
+            // Показываем страницу авторизации по клику на кнопку 
             await Navigation.PushModalAsync(new GoogleSignInPage());
         }
     }

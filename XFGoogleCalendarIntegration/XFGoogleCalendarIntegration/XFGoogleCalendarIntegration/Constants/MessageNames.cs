@@ -8,6 +8,7 @@ namespace XFGoogleCalendarIntegration.Constants
 {
     public static class MessageNames
     {
+        // Имя события успешной авторизации
         public static string LoggedIn = "loggedIn";
     }
 }

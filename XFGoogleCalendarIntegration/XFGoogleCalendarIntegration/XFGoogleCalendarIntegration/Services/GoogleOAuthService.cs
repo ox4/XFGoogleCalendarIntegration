@@ -54,13 +54,9 @@ namespace XFGoogleCalendarIntegration.Services
                                                 "application/x-www-form-urlencoded");
 
             var response = await httpClient.SendAsync(request);
-            var json = await response.Content.ReadAsStringAsync();
-            var accessToken = JsonConvert.DeserializeObject<JObject>(json).Value<string>("access_token");
+            var responseContent = await response.Content.ReadAsStringAsync();
 
-            return new AccessTokenModel()
-            {
-                Token = accessToken
-            };
+            return JsonConvert.DeserializeObject<AccessTokenModel>(responseContent);
         }
     }
 }
