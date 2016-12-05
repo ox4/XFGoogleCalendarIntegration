@@ -55,7 +55,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GoogleApiService.cs" />
     <Compile Include="Services\GoogleOAuthService.cs" />
+    <Compile Include="Services\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
