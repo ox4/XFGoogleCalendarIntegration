@@ -42,6 +42,10 @@
     <Compile Include="Constants\MessageNames.cs" />
     <Compile Include="CustomViews\GoogleSignInButton.cs" />
     <Compile Include="Models\AccessTokenModel.cs" />
+    <Compile Include="Models\Calendar\Event.cs" />
+    <Compile Include="Models\Calendar\EventDateTime.cs" />
+    <Compile Include="Models\Calendar\Events.cs" />
+    <Compile Include="Models\Calendar\ListRequest.cs" />
     <Compile Include="Pages\GoogleSignInPage.xaml.cs">
       <DependentUpon>GoogleSignInPage.xaml</DependentUpon>
     </Compile>
@@ -64,10 +68,6 @@
     </Reference>
     <Reference Include="Google.Apis.Auth, Version=1.19.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Google.Apis.Auth.1.19.0\lib\portable-net45+sl50+netcore45+wpa81+wp8\Google.Apis.Auth.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Google.Apis.Calendar.v3, Version=1.19.0.689, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Google.Apis.Calendar.v3.1.19.0.689\lib\portable-net45+netcore45+wpa81+wp8\Google.Apis.Calendar.v3.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Google.Apis.Core, Version=1.19.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
