@@ -10,7 +10,7 @@ namespace XFGoogleCalendarIntegration.Extensions
     {
         public static string ToRFC3339(this DateTime dateTime)
         {
-            return dateTime.ToString("yyyy-MM-ddTHH:mm:ssK");
+            return dateTime.ToString("yyyy-MM-ddTHH:mm:ss.ffffzzz");
         }
     }
 }

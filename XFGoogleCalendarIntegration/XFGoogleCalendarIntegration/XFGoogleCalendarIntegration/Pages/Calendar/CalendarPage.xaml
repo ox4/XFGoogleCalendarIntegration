@@ -5,6 +5,6 @@
              x:Class="XFGoogleCalendarIntegration.Pages.Calendar.CalendarPage">
   <TabbedPage.Children>
     <calendar:EventsListPage Title="Events" BindingContext="{Binding EventsListViewModel}"></calendar:EventsListPage>
-    <calendar:AddEventPage Title="Add Event"></calendar:AddEventPage>
+    <calendar:AddEventPage Title="Add Event" BindingContext="{Binding AddEventViewModel}"></calendar:AddEventPage>
   </TabbedPage.Children>
 </TabbedPage>

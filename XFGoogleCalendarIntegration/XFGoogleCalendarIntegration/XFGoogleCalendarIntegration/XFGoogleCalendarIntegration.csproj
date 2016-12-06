@@ -68,6 +68,7 @@
     <Compile Include="Services\GoogleApiService.cs" />
     <Compile Include="Services\GoogleOAuthService.cs" />
     <Compile Include="Services\StringExtensions.cs" />
+    <Compile Include="ViewModels\AddEventViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\CalendarViewModel.cs" />
     <Compile Include="ViewModels\EventsListViewModel.cs" />
