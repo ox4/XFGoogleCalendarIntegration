@@ -12,8 +12,11 @@
           IsRefreshing="{Binding IsRefreshing, Mode=OneWay}">
           <ListView.ItemTemplate>
             <DataTemplate>
-              <ViewCell Height="300">
-                <Label Text="{Binding Summary}" FontAttributes="Bold" />
+              <ViewCell>
+                <StackLayout Padding="5">
+                  <Label Text="{Binding Summary}" FontAttributes="Bold" />
+                  <Label Text="{Binding Period}" />
+                </StackLayout>
               </ViewCell>
             </DataTemplate>
           </ListView.ItemTemplate>

@@ -14,12 +14,12 @@ namespace XFGoogleCalendarIntegration.ViewModels
     public class EventsListViewModel : BaseViewModel
     {
         private readonly GoogleApiService googleApiService;
-        private ObservableCollection<Event> events;
+        private ObservableCollection<EventViewModel> events;
         private bool isRefreshing;
 
         public Command PullToRefreshCommand { get; set; }
 
-        public ObservableCollection<Event> Events
+        public ObservableCollection<EventViewModel> Events
         {
             get { return this.events; }
             set
@@ -61,11 +61,17 @@ namespace XFGoogleCalendarIntegration.ViewModels
         {
             var request = new ListRequest()
             {
-                MaxResults = 4
+                
             };
 
             var events = await googleApiService.GetAsync<ListRequest, Events>("https://www.googleapis.com/calendar/v3/calendars/primary/events", request);
-            this.Events = new ObservableCollection<Event>(events.Items);
+            var eventViewModels = this.EventsToViewModels(events.Items);
+            this.Events = new ObservableCollection<EventViewModel>(eventViewModels);
+        }
+
+        private IEnumerable<EventViewModel> EventsToViewModels(IEnumerable<Event> events)
+        {
+            return events.Select(eventModel => new EventViewModel(eventModel));
         }
     }
 }

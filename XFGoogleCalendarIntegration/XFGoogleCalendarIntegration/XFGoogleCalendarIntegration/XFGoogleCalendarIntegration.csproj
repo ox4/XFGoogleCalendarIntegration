@@ -71,6 +71,7 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\CalendarViewModel.cs" />
     <Compile Include="ViewModels\EventsListViewModel.cs" />
+    <Compile Include="ViewModels\EventViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
