@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using XFGoogleCalendarIntegration.Constants;
 using XFGoogleCalendarIntegration.Models;
 using XFGoogleCalendarIntegration.Models.Calendar;
+using XFGoogleCalendarIntegration.Pages.Calendar;
 using XFGoogleCalendarIntegration.Services;
 
 namespace XFGoogleCalendarIntegration.Pages
@@ -19,17 +20,21 @@ namespace XFGoogleCalendarIntegration.Pages
             MessagingCenter.Subscribe<object, AccessTokenModel>(this, MessageNames.LoggedIn, OnLogIn);
         }
 
-        private async void OnLogIn(object sender, AccessTokenModel token)
+        private void OnLogIn(object sender, AccessTokenModel token)
         {
-            var service = new GoogleApiService(token);
-
-            var request = new ListRequest()
+            Device.BeginInvokeOnMainThread(async () =>
             {
-                MaxResults = 4
-            };
+                await this.Navigation.PushModalAsync(new CalendarPage(token));
+            });
+            //var service = new GoogleApiService(token);
+            //
+            //var request = new ListRequest()
+            //{
+            //    MaxResults = 4
+            //};
 
-            var list = await service.GetAsync<ListRequest, Events>("https://www.googleapis.com/calendar/v3/calendars/primary/events", request);
-            // Обработчик успешной авторизации
+            //var list = await service.GetAsync<ListRequest, Events>("https://www.googleapis.com/calendar/v3/calendars/primary/events", request);
+            //// Обработчик успешной авторизации
         }
     }
 }

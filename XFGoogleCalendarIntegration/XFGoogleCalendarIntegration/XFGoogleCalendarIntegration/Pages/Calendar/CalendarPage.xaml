@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:calendar="clr-namespace:XFGoogleCalendarIntegration.Pages.Calendar;assembly=XFGoogleCalendarIntegration"
+             x:Class="XFGoogleCalendarIntegration.Pages.Calendar.CalendarPage">
+  <TabbedPage.Children>
+    <calendar:EventsListPage Title="Events" BindingContext="{Binding EventsListViewModel}"></calendar:EventsListPage>
+    <calendar:AddEventPage Title="Add Event"></calendar:AddEventPage>
+  </TabbedPage.Children>
+</TabbedPage>

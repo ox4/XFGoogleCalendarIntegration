@@ -38,7 +38,9 @@ namespace XFGoogleCalendarIntegration.iOS.CustomRenderers
             {
                 var token = new AccessTokenModel()
                 {
-                    AccessToken = user.Authentication.AccessToken
+                    AccessToken = user.Authentication.AccessToken,
+                    ExpiresIn = 3600,
+                    TokenType = "Bearer"
                 };
 
                 MessagingCenter.Send<object, AccessTokenModel>(this, MessageNames.LoggedIn, token);
