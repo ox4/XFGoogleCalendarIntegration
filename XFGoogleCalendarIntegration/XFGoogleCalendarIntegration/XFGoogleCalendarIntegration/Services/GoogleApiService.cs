@@ -35,17 +35,6 @@ namespace XFGoogleCalendarIntegration.Services
             return JsonConvert.DeserializeObject<TResponse>(responseContent);
         }
 
-        //public async Task<TResponse> GetAsync<TResponse>(string url, IDictionary<string, string> parameters = null)
-        //    where TResponse : class
-        //{
-        //    var requestUrl = parameters == null ? url : this.ComposeUrlWithParameters(url, parameters);
-
-        //    var response = await httpClient.GetAsync(requestUrl);
-        //    var responseContent = await response.Content.ReadAsStringAsync();
-
-        //    return JsonConvert.DeserializeObject<TResponse>(responseContent);
-        //}
-
         public async Task<TResponse> PostAsync<TRequest, TResponse>(string url, TRequest request,
             IDictionary<string, string> parameters = null)
         {

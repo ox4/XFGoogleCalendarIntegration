@@ -24,17 +24,8 @@ namespace XFGoogleCalendarIntegration.Pages
         {
             Device.BeginInvokeOnMainThread(async () =>
             {
-                await this.Navigation.PushModalAsync(new CalendarPage(token));
+                await this.Navigation.PushAsync(new CalendarPage(token));
             });
-            //var service = new GoogleApiService(token);
-            //
-            //var request = new ListRequest()
-            //{
-            //    MaxResults = 4
-            //};
-
-            //var list = await service.GetAsync<ListRequest, Events>("https://www.googleapis.com/calendar/v3/calendars/primary/events", request);
-            //// Обработчик успешной авторизации
         }
     }
 }

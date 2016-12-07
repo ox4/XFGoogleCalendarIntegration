@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using XFGoogleCalendarIntegration.Constants;
 using XFGoogleCalendarIntegration.Extensions;
+using XFGoogleCalendarIntegration.Models;
 using XFGoogleCalendarIntegration.Models.Calendar;
 using XFGoogleCalendarIntegration.Services;
 
@@ -70,7 +72,10 @@ namespace XFGoogleCalendarIntegration.ViewModels
 
         private async void AddEvent()
         {
-            var addedEvent = await this.googleApiService.PostAsync<Event, Event>("https://www.googleapis.com/calendar/v3/calendars/primary/events", this.eventModel);
+            await googleApiService.PostAsync<Event, Event>(GoogleApiConstants.AddEventRequestUrl, eventModel, new Dictionary<string, string>()
+            {
+                { "calendarId", GoogleApiConstants.MainCalendarId }
+            });
         }
     }
 }

@@ -6,6 +6,7 @@ using Foundation;
 using Google.Core;
 using Google.SignIn;
 using UIKit;
+using XFGoogleCalendarIntegration.Constants;
 
 namespace XFGoogleCalendarIntegration.iOS
 {
@@ -27,6 +28,7 @@ namespace XFGoogleCalendarIntegration.iOS
             // Client Id iOS приложения, созданного в Google API Console
             string clientId = "";
             SignIn.SharedInstance.ClientID = clientId;
+            SignIn.SharedInstance.ServerClientID = GoogleApiConstants.ClientId;
 
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
